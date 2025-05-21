@@ -10,4 +10,8 @@ func main() {
 	
 	name = "Taka"
 	fmt.Println(name)
+
+	// Auto detect data type
+	var myName = "Alfian"
+	fmt.Println(myName)
 }
