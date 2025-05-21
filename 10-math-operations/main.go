@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 func main() {
+	// Arithmetic
 	a := 10
 	b := 10
 	c := a + b
@@ -14,18 +15,15 @@ func main() {
 	g := d - e * f / a
 	fmt.Println("The result of g:", g)
 
+	// Augmented Assigments
 	a += 904
 	fmt.Println("The value of 'a' rn:", a)
-
 	a -= 120
 	fmt.Println("The value of 'a' rn:", a)
-
 	a *= 10
 	fmt.Println("The value of 'a' rn:", a)
-
 	a -= 2
 	fmt.Println("The value of 'a' rn:", a)
-
 	a %= 2
 	fmt.Println("The value of 'a' rn:", a)
 }
