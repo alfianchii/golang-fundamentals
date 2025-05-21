@@ -21,4 +21,13 @@ func main() {
 
 	title = "よつばと！"
 	fmt.Println(title)
+
+	// Multiple vars
+	var (
+		firstName = "Alfian"
+		lastName = "Taka"
+	)
+
+	fmt.Println(firstName)
+	fmt.Println(lastName)
 }
