@@ -15,6 +15,7 @@ func main() {
 	
 	names[1] = "Chii"
 	fmt.Println("Second name:", names[1])
+	fmt.Println("--------")
 
 	// Immediately state the value of array
 	// var myName [2]string = [2]string{
@@ -22,6 +23,15 @@ func main() {
 	// 	"Taka",
 	// }
 	var myName = [3]string{"Alfian", "Taka"}
-
 	fmt.Println(myName)
+	fmt.Println("--------")
+
+	// Array funcs
+	// [...] calculate based on the early values
+	var yourName = [...]string{"Earl", "Phantomhive"}
+	var lengthOfYourName int = len(yourName)
+	// Got error
+	// yourName[2] = "Freak"
+
+	fmt.Println(lengthOfYourName)
 }
