@@ -14,4 +14,11 @@ func main() {
 	// Auto detect data type
 	var myName = "Alfian"
 	fmt.Println(myName)
+
+	// Replace 'var' w/ ':=' keyword
+	title := "君の名前は？"
+	fmt.Println(title)
+
+	title = "よつばと！"
+	fmt.Println(title)
 }
