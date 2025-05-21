@@ -26,4 +26,15 @@ func main() {
 	fmt.Println("The value of 'a' rn:", a)
 	a %= 2
 	fmt.Println("The value of 'a' rn:", a)
+
+	// Unary Operator
+	a++
+	a++
+	fmt.Println("The value of 'a' rn:", a)
+	a--
+	fmt.Println("The value of 'a' rn:", a)
+
+	isProgramRunning := false
+
+	fmt.Println("Is program running:", !isProgramRunning)
 }
