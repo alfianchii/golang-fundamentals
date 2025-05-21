@@ -12,5 +12,20 @@ func main() {
 	e := 103
 	f := 90
 	g := d - e * f / a
-	fmt.Println("The result of g:", g)	
+	fmt.Println("The result of g:", g)
+
+	a += 904
+	fmt.Println("The value of 'a' rn:", a)
+
+	a -= 120
+	fmt.Println("The value of 'a' rn:", a)
+
+	a *= 10
+	fmt.Println("The value of 'a' rn:", a)
+
+	a -= 2
+	fmt.Println("The value of 'a' rn:", a)
+
+	a %= 2
+	fmt.Println("The value of 'a' rn:", a)
 }
