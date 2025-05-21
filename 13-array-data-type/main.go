@@ -15,4 +15,13 @@ func main() {
 	
 	names[1] = "Chii"
 	fmt.Println("Second name:", names[1])
+
+	// Immediately state the value of array
+	// var myName [2]string = [2]string{
+	// 	"Alfian",
+	// 	"Taka",
+	// }
+	var myName = [3]string{"Alfian", "Taka"}
+
+	fmt.Println(myName)
 }
