@@ -86,4 +86,12 @@ func main() {
 	fmt.Println("My name:", myName)
 	fmt.Println("My full name:", myFullName)
 	fmt.Println("================================================================================================================")
+
+	// Slice copy
+	fromSlice := days[:]
+	toSlice := make([]string, len(fromSlice), cap(fromSlice))
+	copy(toSlice, fromSlice)
+
+	fmt.Println(fromSlice)
+	fmt.Println(toSlice)
 }
