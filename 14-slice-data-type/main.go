@@ -85,4 +85,5 @@ func main() {
 	myFullName[1] = "Chii"
 	fmt.Println("My name:", myName)
 	fmt.Println("My full name:", myFullName)
+	fmt.Println("================================================================================================================")
 }
