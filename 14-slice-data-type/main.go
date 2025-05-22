@@ -57,4 +57,32 @@ func main() {
 	fmt.Println("Workdays:", workDays)
 	fmt.Println("Days:", days)
 	fmt.Println("================================================================================================================")
+
+	// Slice init
+	var myName []string = make([]string, 2, 5) // Data type, length, capacity
+	myName[0] = "Alfian"
+	myName[1] = "Taka"
+	// Got error
+	// myName[2] = "Ganteng"
+	fmt.Println("My name:", myName)
+	fmt.Println("Slice's length:", len(myName))
+	fmt.Println("Slice's capacity:", cap(myName))
+	fmt.Println("----------------")
+
+	/*
+		If we append items which exceeded the 
+		parent's capacity (5), then it would
+		make the new array and any changes
+		made in the sliced (myFullName) array wouldn't
+		affect the parent (myName)
+	*/ 
+	// myFullName := append(myName, "Ganteng", "Maksimal") // Change to Chii, affect parent
+	myFullName := append(myName, "Ganteng", "Maksimal", "Parah", "Sekali", "Lagi") // Change to Chii, doesn't affect parent (create new array)
+	fmt.Println("My name:", myFullName)
+	fmt.Println("Slice's length:", len(myFullName))
+	fmt.Println("Slice's capacity:", cap(myFullName))
+
+	myFullName[1] = "Chii"
+	fmt.Println("My name:", myName)
+	fmt.Println("My full name:", myFullName)
 }
