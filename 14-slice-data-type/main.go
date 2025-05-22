@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	// The slice method
+	// The Slice Method
 	names := [...]string{"Taka", "Ogi", "Kanji", "Nugraha", "Moe"} // This is an array
 	firstSlice := names[1:3]
 	secondSlice := names[3:]
@@ -58,7 +58,7 @@ func main() {
 	fmt.Println("Days:", days)
 	fmt.Println("================================================================================================================")
 
-	// Slice init
+	// Slice Init
 	var myName []string = make([]string, 2, 5) // Data type, length, capacity
 	myName[0] = "Alfian"
 	myName[1] = "Taka"
@@ -87,7 +87,7 @@ func main() {
 	fmt.Println("My full name:", myFullName)
 	fmt.Println("================================================================================================================")
 
-	// Slice copy
+	// Slice Copy
 	fromSlice := days[:]
 	toSlice := make([]string, len(fromSlice), cap(fromSlice))
 	copy(toSlice, fromSlice)
@@ -108,4 +108,47 @@ func main() {
 	fmt.Println("Array's capacity:", cap(array))
 	fmt.Println("Slice's capacity:", cap(slice))
 	fmt.Println("Slice's capacity:", cap(slice))
+	fmt.Println("================================================================================================================")
+
+	// Furthermore Explanation
+	// Got error
+	// newArray := append(array, 1)
+	/*
+		This would create a new slice from 'array'
+		var that have a pointer to the 'array' var
+	*/ 
+	newArray := array[:]
+	newArray[0] = 99
+	fmt.Println(array) // Affected
+	fmt.Println(newArray)
+
+	// Got error: the 'array' var still array data type
+	// appendedData := append(array, 1)
+	appendedData := append(newArray, 1)
+	fmt.Println("Appended data:", appendedData)
+	fmt.Println("----------------")
+
+	fmt.Println("Array's length:", len(array))
+	fmt.Println("Array's capacity:", cap(array))
+	fmt.Println("New Array's length:", len(newArray))
+	fmt.Println("New Array's length:", cap(newArray))
+	fmt.Println("Appended Data's capacity:", len(appendedData))
+	fmt.Println("Appended Data's capacity:", cap(appendedData))
+	fmt.Println("----------------")
+
+	fmt.Println("----------------CHANGE THE appendedData[0]!----------------")
+	/*
+		Doesn't affect its reference and 
+		its parent since the append() method
+		would create a new ... (array or slice?)
+		First, append() allocates a new array
+		(if there's no capacity left).
+		Then copies the prior elements.
+		Afterward, returns a new slice
+		(pointing to the new array).
+	*/ 
+	appendedData[0] = 100
+	fmt.Println("Array:", array)
+	fmt.Println("New Array:", newArray)
+	fmt.Println("Appended Data:", appendedData)
 }
