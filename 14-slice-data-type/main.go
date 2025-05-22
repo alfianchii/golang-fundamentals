@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 	// The slice method
-	names := [...]string{"Taka", "Ogi", "Kanji", "Nugraha", "Moe"}
+	names := [...]string{"Taka", "Ogi", "Kanji", "Nugraha", "Moe"} // This is an array
 	firstSlice := names[1:3]
 	secondSlice := names[3:]
 	thirdSlice := names[:3]
@@ -19,7 +19,7 @@ func main() {
 	fmt.Println("================================================================================================================")
 
 	// Funcs
-	days := [7]string{"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}
+	days := [7]string{"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"} // This is an array
 	fmt.Println("Days:", days)
 	fmt.Println("----------------")
 
@@ -94,4 +94,18 @@ func main() {
 
 	fmt.Println(fromSlice)
 	fmt.Println(toSlice)
+	fmt.Println("================================================================================================================")
+
+	// Array vs. Slice
+	array := [...]int{1, 2, 3, 4, 5} // Fixed size: 5
+	slice := []int{1, 2, 3, 4, 5}
+
+	fmt.Println("This is ARRAY:", array)
+	fmt.Println("This is SLICE:", slice)
+	fmt.Println("----------------")
+
+	fmt.Println("Array's length:", len(array))
+	fmt.Println("Array's capacity:", cap(array))
+	fmt.Println("Slice's capacity:", cap(slice))
+	fmt.Println("Slice's capacity:", cap(slice))
 }
