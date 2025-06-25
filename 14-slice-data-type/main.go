@@ -45,8 +45,17 @@ func main() {
 		append() also added the data to its parent, 
 		but start from the end of the sliced data's index (the reference).
 		WOULDN'T add the data into the reference (workDays)
-	*/ 
+	*/
 	weekend := append(workDays, workDay1)
+	/* 
+		If append tried to add items beyond of days' capacity, 5 + 3 = 8
+		but the cap is 7, then append would make a new array, copy all
+		elements of workDays + new elements, then returns as a new slice.
+		Anyway, the weekend's cap is doubled based on the parent's cap.
+		Parent's cap: 7
+		Weekend's cap: 7x2 = 14
+	*/
+	// weekend := append(workDays, workDay1, workDay1, workDay1)
 	fmt.Println("Weekend:", weekend)
 	fmt.Println("Workdays:", workDays)
 	fmt.Println("Days:", days)
