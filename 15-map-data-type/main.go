@@ -1,0 +1,22 @@
+package main
+
+import "fmt"
+
+func main() {
+	// var person map[string]string = map[string]string{
+	// 	"name": "Alfian",
+	// 	"address": "Indonesia",
+	// }
+	// var person = map[string]string{
+	// 	"name": "Alfian",
+	// 	"address": "Indonesia",
+	// }
+	person := map[string]string{
+		"name": "Alfian",
+		"address": "Indonesia",
+	}
+
+	fmt.Println(person)
+	fmt.Println(person["name"])
+	fmt.Println(person["address"])
+}
