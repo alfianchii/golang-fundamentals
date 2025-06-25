@@ -98,8 +98,9 @@ func main() {
 
 	// Slice Copy
 	fromSlice := days[:]
+	// This would init new slice, doesn't referenced to days
 	toSlice := make([]string, len(fromSlice), cap(fromSlice))
-	copy(toSlice, fromSlice)
+	copy(toSlice, fromSlice) // Copy all elements of fromSlice to toSlice
 
 	fmt.Println(fromSlice)
 	fmt.Println(toSlice)
