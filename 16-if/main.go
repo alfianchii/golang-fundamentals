@@ -16,4 +16,10 @@ func main() {
 	} else {
 		fmt.Println("Hello! What's ur name?")
 	}
+
+	if nameLength := len(name); nameLength > 5 {
+		fmt.Println("Your name is too long.")
+	} else {
+		fmt.Println("Your name is OK.")
+	}
 }
