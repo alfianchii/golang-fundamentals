@@ -9,4 +9,9 @@ func main() {
 		fmt.Println("Perulangan ke", counter)
 		counter++
 	}
+
+	// With init and post statements
+	for counters := 1; counters <= 10; counters++ {
+		fmt.Println("Perulangan ke", counter)
+	}
 }
