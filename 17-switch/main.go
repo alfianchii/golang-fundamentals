@@ -17,4 +17,11 @@ func main() {
 	default:
 		fmt.Println("Hello! What's ur name?")
 	}
+
+	switch nameLength := len(name); nameLength > 5 {
+	case true:
+		fmt.Println("Your name is too long.")
+	case false:
+		fmt.Println("Your name is OK.")
+	}
 }
