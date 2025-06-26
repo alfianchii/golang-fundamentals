@@ -14,4 +14,16 @@ func main() {
 	for counters := 1; counters <= 10; counters++ {
 		fmt.Println("Perulangan ke", counter)
 	}
+
+	// Range (collection date types: array, slice, map)
+	var names []string = []string{"Taka", "Ogi", "Moe"}
+	for i := 0; i < len(names); i++ {
+		fmt.Println(names[i])
+	}
+	for index, value := range names {
+		fmt.Println(index, value)
+	}
+	for _, value := range names {
+		fmt.Println(value)
+	}
 }
