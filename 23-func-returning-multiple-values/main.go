@@ -9,4 +9,7 @@ func getMyFullName() (string, string) {
 func main() {
 	var myFirstName, myLastName string = getMyFullName()
 	fmt.Println(myFirstName, myLastName)
+
+	var _, lastName string = getMyFullName()
+	fmt.Println(lastName)
 }
