@@ -15,6 +15,13 @@ func spamFilter(word string) string {
 	}
 }
 
+type Filter func(string) string
+
+func sayHelloWithFilterPart2(name string, filter Filter) {
+	var filteredName string = filter(name)
+	fmt.Println("Hello, " + filteredName + "!")
+}
+
 func main() {
 	var myName string = "Alfian Taka"
 	sayHelloWithFilter(myName, spamFilter)
@@ -22,4 +29,8 @@ func main() {
 	var comment string = "Fuck"
 	var filterWord func(string) string = spamFilter
 	sayHelloWithFilter(comment, filterWord)
+
+	var myRealName string = "Alfian Handsome"
+	var filterName Filter = filterWord
+	sayHelloWithFilterPart2(myRealName, filterName)
 }
