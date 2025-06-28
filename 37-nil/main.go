@@ -40,4 +40,12 @@ func main() {
 	} else {
 		fmt.Println(moe["name"])
 	}
+	/*
+		If u return a nil value w/ a map
+		data type based, then u couldn't assign
+		a value into it. If so, better return 
+		an empty map instead of nil.
+	*/
+	// This occurs panic
+	// moe["name"] = "Moe"
 }
